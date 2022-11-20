@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ejercicio1.css">
+        <title>Ejercicio 1</title>
+    </head>
+    <body>
+        <h2 class="titulo">Liga BBVA.Clasificación</h2>
+        <table class="tabla" border="1px">
+            <tr>
+                <td onclick="color()" class="pColor"><b> Posición</b></td>
+                <td><b>Equipos</b></td>
+                <td><b>Puntos</b></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>FC Barcelona</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Real Madrid</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Atlético de Madrid</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Sevilla FC</td>
+                <td>9</td>
+            </tr>
+        </table>
+        <div id="formEnviado"></div>
+        <p>
+            Posición <input class="posicion" type="text">
+            Equipo <input class="equipo" type="text">
+            Puntos <input class="puntos" type="text">
+            <button onclick="aplicar()">Aplicar</button>
+        </p>
+
+        <!--
+            -----------------------------------------------------------------
+            Para mostrar y ocultar los datos insertados en: Posicion, Equipo y Puntos
+        -->
+        
+        <div id="informacionD"  hidden="false"></div>
+        <button class="infoBoton"  onclick="informacion()" value="0">Información</button>
+        <button onclick="enviar()">Enviar</button>
+
+        <!--
+            ---------------------------------------------------------------
+            Para añadir y borrar datos en una lista
+        -->
+
+        <ol class="lista"></ol>
+
+        <button onclick="lista()">Añadir</button>
+        <button onclick="borrarList()">Borrar</button>
+
+
+        <!--
+           
+            OTRA COSA
+        
+        -->
+
+
+        <ul class="listaDes">
+            <li>AA</li>
+            <li>sias</li>
+            <li>dfefo</li>
+        </ul>
+
+
+        <ol class="listaOrd">
+            <li>Hola</li>
+            <li>Adios</li>
+            <li>Aflia</li>
+        </ol>
+
+        <button onclick="listaDes()">borrarDes</button>
+        <button onclick="listaOrd()">borrarOrd</button>
+
+        <script src="ejercicio1.js"></script>
+    </body>
+</html>

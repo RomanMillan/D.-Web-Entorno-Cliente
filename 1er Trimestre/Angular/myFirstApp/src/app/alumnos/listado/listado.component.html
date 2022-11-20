@@ -1,0 +1,24 @@
+<p>Listado de alumnos</p>
+
+
+ <ul>
+    <li *ngFor="let i of nombres; 
+    let e = index; 
+    let par=even; 
+    let impar=odd" 
+    [ngClass]="{par:par,impar:impar}">
+       {{e+1}} {{i}}
+    </li>
+</ul> 
+
+<h3 *ngIf="aprobado.length>0; else malo">Aprobado</h3>
+<ng-template #malo>
+    <h3>Que malo eres</h3>
+</ng-template>
+
+<ul>
+    <li *ngFor="let i of aprobado" >
+       Este alumno esta aprobado {{i}}
+    </li>
+</ul>
+<button (click)="[aprobar()]">Aprobar</button>

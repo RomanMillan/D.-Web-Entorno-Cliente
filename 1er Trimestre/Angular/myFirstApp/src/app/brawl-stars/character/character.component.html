@@ -1,0 +1,9 @@
+<h3>Personajes</h3>
+<hr>
+<ul>
+    <li *ngFor="let i of characters">
+                {{i.name}} - <span [ngClass]="{hight: i.health> 3001, 
+                    half: i.health > 1000 && i.health < 3000, 
+                    short: i.health < 1000}">{{i.health}}</span>
+    </li>
+</ul>

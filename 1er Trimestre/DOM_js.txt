@@ -1,0 +1,58 @@
+DOM document object model
+
+►►Atributos globales:
+  - contenteditable - Indica si el elemento puede ser modificable por el usuario (boolean)
+  - dir - indica la direccionalidad del texto
+  - hidden - Indica si el elemento se oculta o no (boolean)
+  - tabindex - Indica si el elemento puede obtener un focus de input (boolean)
+  - title - Contiene un texto con información relacionada al elemento al que pertenece.
+
+►►Atributos de inputs
+  - className
+  - value
+  - type
+  - accept
+  - form
+  - minlength
+  - placeholder
+  - required
+
+►►Atributos style
+  - igual que el css pero usando el Camel Case (ej. background-color ► backgorundColor)
+
+►►Clases, classList y Metodos de classList
+  - add() - añade una clase
+  - remove() - borra una clase
+  - item() - devuelve la clase del indice especificado
+  - contains() - verifica si ese elemento posee o no la clase especificada
+  - replace() - reemplaza una clase por otra
+  - toggle() - si no tiene la clase especificada, la agrega, si la tiene la elimina.
+
+►►Obtención y Modificacion de Elementos
+  - textContent - devuleve el texto de cualquier nodo
+
+  - innerText - devuelve el texto visible de un node element. ◄ NO SE USA
+  - outerText - devuleve el texto de las etiquetas HTML incluidas las etiquetas. ◄ NO SE USA
+
+  - innterHTML - devuleve el contenido HTML de un elemento
+  - outerHTML - devuelve el codigo HTML completo del elemento
+
+►►Creación de Elementos
+  - createElement() - crea un elemento (ej. document.createElement("LI")) [tiene que estar en mayusculas]
+  - createTextNode() - crea un objeto texto y tiene mas propiedades que innerText
+  - createDocumentFragment()
+  - appendChild() - añade un hijo a al objeto
+
+►►Obtencion y modificación de childs
+  - firstElementChild
+  - lastElementCild
+  - children - devuelve todo los elementos hijos
+
+►►Metodos de childs
+  - replaceChild()
+  - removeChild()
+  - hasChildNodes()
+
+
+
+

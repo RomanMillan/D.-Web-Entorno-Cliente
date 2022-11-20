@@ -1,0 +1,48 @@
+►►Componentes
+¿Qué son?
+Los componentes se pueden crear para ser insertados en la pagina principal. 
+Se pueden crear todos los que sea necesario y pueden ser insertados uno dentro de otro.
+
+Crear componentes se puede de manera manual o por linea de comandos.
+Manual
+En la carpeta src > app > crear una nueva carpeta donde llevará el nombre del componente.
+
+Dentro crear un archivo para poder "compartir" o utilizar este componente
+nombreComponente.component.ts ej: empleados.component.ts
+
+Dentro poner la información básica
+import { Component } from "@angular/core";  	//el import del componente
+
+@Component({					// ponemos las rutas relativas de nuestros archivos
+    selector: "app-empleados",			// como se va a llamar nuestro componente para despues invocarlo
+    templateUrl: "./empleados.component.html",	// ruta del template de html
+    styleUrls: ["./empleados.component.css"]	// ruta del style del css
+})
+
+export class EmpleadosComponet{			//clase del componente
+
+}
+
+Despues ir a app.modules.ts y añadir el import: import { EmpleadosComponet } from './empleados/empleados.component';
+y  en @NgModule añadir EmpleadosComponet 
+Todo esto es para que pueda leer nuestro archivo que hemos creado en el anterior paso.
+
+Despues crear lod demas archivos: empleados.component.html y empleados.component.css dentro de nuestra carpeta
+
+Y cuando queramos usar nuestro templete tenemos que escribir <app-empleados></app-empleados> //como una etiqueta mas de html
+
+Linea de comandos
+ng g c nombreComponente
+
+_________________________________________________________________________________________
+►►Interpolación de cadenas
+
+nombre = "Maria"  // src/app/app.component.ts
+ 
+<p>Hola {{nombre}}</p> //src/app/app.component.html
+
+------------------------------------------------------------------------------------------
+►►Property Binding (propiedad puente)
+Ej: En la clase del archivo .ts creamos desabilitar = true;
+y en el archivo .html en un un <input type="text" [disabled]="dasabilitar">
+Esta es una manera de puentear las propiedades que tenemos en el ts y hmtl.

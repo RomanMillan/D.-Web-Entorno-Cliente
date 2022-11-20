@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Perritos",
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "title": "Gatos",
+      "authorId": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Tengo un pastor aleman con el culo caido. q hago?",
+      "postId": 1,
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "body": "Los gatos son unos interesados",
+      "postId": 2,
+      "authorId": 2
+    },
+    {
+      "id": 3,
+      "body": "Los perros son el mejor amigo del hombre",
+      "postId": 1,
+      "authorId": 3
+    }
+  ],
+  "author": [
+    {
+      "id": 1,
+      "name": "Mait7"
+    },
+    {
+      "id": 2,
+      "name": "Manolo"
+    },
+    {
+      "id": 3,
+      "name": "Susana"
+    },
+    {
+      "id": 4,
+      "name": "Pepita"
+    }
+  ]
+}

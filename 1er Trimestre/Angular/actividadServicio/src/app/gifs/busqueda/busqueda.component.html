@@ -1,3 +1,22 @@
 <h5>Buscar:</h5>
-<input type="text" class="form-control" placeholder="Buscar gifs..." #nameIns (change)="add(nameIns.value)">
+<form (ngSubmit)="search()">
+    <input type="text" 
+        name="query"
+        class="form-control" 
+        placeholder="Buscar gifs..." 
+        [(ngModel)]="query"
+    >
+</form>
 
+   <!--  
+    Esto es otra manera de conger los datos del input 
+    llamar al metodo cuando se le de al enter 
+    
+    #nameIns  == es el nombre que le damos al input (solo en angular)
+    
+    (change)="" == es el disparador del evento (en este caso cuando cambie)
+
+    add(nameIns.value) == el metodo donde le pasamos el valor del input
+
+    #nameIns (change)="add(nameIns.value)" 
+-->

@@ -12,8 +12,21 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /*
+   Podemos crear un metodo y despues llamarlo con un *ngFor="let i of mostrar()"
+   en este caso es importante poner los () ya que sino no funcionará
+  */
   mostrar():string[]{
     return this.servicio.historial; 
     }
+
+  /* Esto es otra manera de obtener el historial
+    Es odteniendo el metodo directamente de gifs-service 
+    Y esto lo podemos hacer ya que hemos inyectado previamente 
+    services en el constructor.
+  */
+  get historial():string[]{
+    return this.servicio.historial;
+  }
     
 }

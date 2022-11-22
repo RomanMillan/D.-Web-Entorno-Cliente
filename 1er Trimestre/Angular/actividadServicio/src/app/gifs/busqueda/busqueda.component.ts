@@ -8,14 +8,12 @@ import { GSService } from '../services/gifs-service.service';
 export class BusquedaComponent implements OnInit {
 
   constructor(private servicio:GSService) { }
-    
-   add(query:string):void{
-    if(this.servicio.historial.length<10){
-      if(!this.servicio.historial.includes(query)){
-        this.servicio.buscarGifs(query);
-      }
-    }
-   }
+  
+  query:string='';
+  search():void{
+      this.servicio.buscarGifs(this.query);
+      this.query="";
+  }
    
 
   ngOnInit(): void {

@@ -28,5 +28,9 @@ export class SidebarComponent implements OnInit {
   get historial():string[]{
     return this.servicio.historial;
   }
-    
+
+   sidebarHistory(query:string){
+     this.servicio.buscarGifs(query);
+   } 
+
 }

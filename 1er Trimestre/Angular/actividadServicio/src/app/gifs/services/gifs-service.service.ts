@@ -13,7 +13,9 @@ export class GSService { /* GSService es un alias para que el nombre no sea tan 
   private url:string = 'https://api.giphy.com/v1/gifs/search';
   results:Gif[] = [];
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+    this._historial = JSON.parse(localStorage.getItem('historial')!)||[];
+  }
   
   get historial():string[]{
     return [...this._historial];
@@ -24,10 +26,16 @@ export class GSService { /* GSService es un alias para que el nombre no sea tan 
     if(clean!=="" && !this._historial.includes(clean)){
       this._historial.unshift(query);
       this._historial = this._historial.splice(0,10);
+      localStorage.setItem('historial', JSON.stringify(this._historial))
     }
     const params = new HttpParams()
     .set('api_key', this.api_key)
     .set('q', query)
+    .set('limit',10)
+
+    //OJO LO SIGUENTE NO ESTABLECES UN PARAMETRO NUEVO, DEVUELVE UN NUEVO 
+    //OBJETO HTTPPARAMS CON EL ATRIBUTO3 AÑADIDO
+    //params.set('atributo3',3)
     
     this.http.get<GifsSearchResponse>(this.url,{params})
     .subscribe((resp)=> this.results = resp.data

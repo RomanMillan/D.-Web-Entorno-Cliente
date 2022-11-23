@@ -10,6 +10,7 @@ export class BusquedaComponent implements OnInit {
   constructor(private servicio:GSService) { }
   
   query:string='';
+
   search():void{
       this.servicio.buscarGifs(this.query);
       this.query="";

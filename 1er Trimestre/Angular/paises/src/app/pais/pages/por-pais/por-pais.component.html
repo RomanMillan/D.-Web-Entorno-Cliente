@@ -1,1 +1,10 @@
-<p>por-pais works!</p>
+<h2>Por País</h2>
+<hr>
+<form (ngSubmit)="search()">
+    <input type="text" 
+        placeholder="Buscar país..."
+        name="query"
+        [(ngModel)]="query"
+    >
+</form>
+<hr>

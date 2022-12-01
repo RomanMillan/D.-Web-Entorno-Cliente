@@ -11,7 +11,7 @@ export class VerPaisComponent implements OnInit {
   constructor(private service:PaisesServiceService, private activeRoute:ActivatedRoute ) { }
 
   code:string='';
-  pais:any;
+  pais!:Restcountry;
 
   ngOnInit(): void {
     this.code=this.activeRoute.snapshot.params['id'];

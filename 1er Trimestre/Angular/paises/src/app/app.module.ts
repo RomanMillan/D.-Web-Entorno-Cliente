@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { SharedModule } from './shared/shared.module';
 import { PaisModule } from './pais/pais.module';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

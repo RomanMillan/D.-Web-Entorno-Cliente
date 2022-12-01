@@ -15,6 +15,11 @@ export class PaisesServiceService {
     return this.http.get<Restcountry[]>(`${this.url}name/${query}`) 
   }
 
+
+  searchCaptial(query:string):Observable<Restcountry[]>{
+    return this.http.get<Restcountry[]>(`${this.url}capital/${query}`) 
+  }
+
   country(code:string):Observable<Restcountry[]>{
     return this.http.get<Restcountry[]>(`${this.url}alpha/${code}`)
   }

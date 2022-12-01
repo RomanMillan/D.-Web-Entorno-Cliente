@@ -31,7 +31,7 @@
             <td> {{i.capital}}, {{i.name.common}}</td> <!-- La capital, el nombre del país y la población lo obtendremos de la api -->
             <td>{{i.population|number}} </td>
             <td>
-                <a ><app-ver-pais></app-ver-pais></a> <!-- Esto lo dejamos así de momento -->
+                <a [routerLink]="['/pais', i.ccn3]"> mostrar...</a> <!-- Esto lo dejamos así de momento -->
             </td>
         </tr>
     </tbody>

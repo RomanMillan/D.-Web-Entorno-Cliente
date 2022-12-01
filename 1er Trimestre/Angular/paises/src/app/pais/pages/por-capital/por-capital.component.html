@@ -1,1 +1,39 @@
-<p>por-capital works!</p>
+<h2>Por Capital</h2>
+<hr>
+<form (ngSubmit)="search()">
+    <input type="text" 
+        placeholder="Buscar capital..."
+        name="query"
+        [(ngModel)]="query"
+    >
+</form>
+<hr>
+<div class="alert alert-danger" *ngIf="error.length">
+    No se encontró nada con el término {{error}}
+</div>
+
+<table class="table table-hover" *ngIf="results.length">
+    <thead>
+        <tr>
+            <th> # </th>
+            <th> Bandera </th>
+            <th> Nombre </th>
+            <th> Población </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of results; let e = index"> <!-- Esto es lo que tenemos que repetir por cada país que encuentre -->
+            <td> {{e+1}} </td> <!-- Aquí obtendremos el número de resultado -->
+            <td>
+                <img class="small-flag" [src]="i.flags.svg" > <!-- Aquí obtendremos la url de la bandera --> 
+            </td>
+            <td> {{i.capital}}, {{i.name.common}}</td> <!-- La capital, el nombre del país y la población lo obtendremos de la api -->
+            <td>{{i.population|number}} </td>
+            <td>
+                <a [routerLink]="['/pais', i.ccn3]"> mostrar...</a> <!-- Esto lo dejamos así de momento -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+

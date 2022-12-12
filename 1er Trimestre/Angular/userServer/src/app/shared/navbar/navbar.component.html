@@ -1,9 +1,12 @@
 <div class="row">
     <div class="col col-sm-10 col-md-8">
         <ul class="nav nav-tabs">
-            <li class="nav-item" [routerLink]="['/']"><a class="nav-link">Home</a></li>
+            <li class="nav-item" >
+                <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/']">Home</a>
+        </li>
             <li [routerLink]="['/servers']" class="nav-item"><a class="nav-link" >Servers</a></li>
-            <li class="nav-item" [routerLink]="['/Users']"><a class="nav-link" >Users</a></li>
+            <li class="nav-item" [routerLink]="['/users']"><a class="nav-link" >Users</a></li>
+
         </ul>
     </div>
 </div>

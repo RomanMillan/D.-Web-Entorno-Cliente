@@ -11,8 +11,12 @@ const routes: Routes = [
         component: HomeComponent
     },
     {
-        path:'Users',
+        path:'users',
         component: UsersComponent
+    },
+    {
+        path: 'users/1',
+        component: UserComponent
     },
     {
         path:'servers',

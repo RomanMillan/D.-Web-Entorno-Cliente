@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +13,7 @@ import { RouterLink } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterLink
+    RouterModule
   ],
   exports:[
     NavbarComponent,

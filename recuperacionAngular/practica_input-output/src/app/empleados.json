@@ -1,0 +1,26 @@
+[
+    {
+      "nombre": "John",
+      "apellido": "Doe",
+      "cargo": "Desarrollador",
+      "departamento": "Tecnología"
+    },
+    {
+      "nombre": "Jane",
+      "apellido": "Smith",
+      "cargo": "Diseñadora",
+      "departamento": "Diseño"
+    },
+    {
+      "nombre": "Robert",
+      "apellido": "Johnson",
+      "cargo": "Gerente de Proyecto",
+      "departamento": "Administración"
+    },
+    {
+      "nombre": "Emily",
+      "apellido": "Davis",
+      "cargo": "Analista de Datos",
+      "departamento": "Tecnología"
+    }
+  ]
